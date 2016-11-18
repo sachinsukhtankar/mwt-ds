@@ -130,7 +130,7 @@ namespace DecisionServicePrivateWeb.Controllers
             catch (Exception ex)
             {
                 new TelemetryClient().TrackException(ex);
-                return new HttpStatusCodeResult(HttpStatusCode.InternalServerError, ex.ToString());
+                return new HttpStatusCodeResult(HttpStatusCode.InternalServerError, ex.Message);
             }
         }
 
